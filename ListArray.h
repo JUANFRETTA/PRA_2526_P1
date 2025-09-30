@@ -56,8 +56,8 @@ class ListArray : public List<T> {
 			for(int i = pos; i<n-1;i++)
 				arr[i] = arr[i+1];
 			n--;
-			if (n <= max / 4 && max > MINSIZE)
-            			resize(std::max(max / 2, MINSIZE));
+			if (n <= max / 4 && max > 2)
+            			resize(std::max(max / 2,2));
 
         		return removed;
 		}
@@ -93,7 +93,7 @@ class ListArray : public List<T> {
 		friend std::ostream& operator<<(std::ostream& out, const ListArray<T>& list) {
 			out << "[";
 			for (int i = 0; i<list.n; i++){
-				out << list.array[i];
+				out << list.arr[i];
 				if(i<list.n-1)
 					out << ", ";
 			}
