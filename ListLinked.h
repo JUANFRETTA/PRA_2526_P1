@@ -116,7 +116,7 @@ class ListLinked : public List<T> {
 			return -1;
 		}
 
-		bool empty(T e)override{
+		bool empty()override{
 			return n == 0;
 		}
 
